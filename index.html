@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PARFUMERIE 51 — Nos réseaux</title>
+<meta name="description" content="Bienvenue chez Parfumerie 51. Retrouvez-nous sur Instagram, TikTok, Facebook et WhatsApp.">
+<meta name="theme-color" content="#0C0B09">
+<meta property="og:title" content="PARFUMERIE 51">
+<meta property="og:description" content="Retrouvez-nous sur nos réseaux sociaux.">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo-p51.png" type="image/png">
+<link rel="apple-touch-icon" href="logo-p51.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --noir: #0C0B09;
+    --noir-2: #15130F;
+    --or: #C9A44C;
+    --or-clair: #E8CF8E;
+    --ivoire: #F3EBDA;
+    --ivoire-doux: #CFC5B1;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--noir);
+    color: var(--ivoire);
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px calc(24px + env(safe-area-inset-bottom));
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Halo doré très discret derrière le logo */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(520px 360px at 50% 12%, rgba(201,164,76,0.14), transparent 70%);
+  }
+  .carte {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    padding: 40px 24px 28px;
+    border: 1px solid var(--or);
+    text-align: center;
+  }
+  .carte::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(201,164,76,0.4);
+    pointer-events: none;
+  }
+
+  /* ===== LOGO =====
+     Pour remplacer le logo : déposez votre fichier officiel à la place de
+     "logo-p51.png" (même nom), dans le même dossier que cette page. */
+  .logo {
+    display: block;
+    width: 132px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .logo-secours {
+    display: none;
+    width: 112px;
+    height: 112px;
+    margin: 0 auto;
+    border: 1px solid var(--or);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 34px;
+    color: var(--or-clair);
+  }
+
+  h1 {
+    margin: 20px 0 0;
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(26px, 7.4vw, 34px);
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+    color: var(--or-clair);
+  }
+  .bienvenue {
+    margin: 10px 0 0;
+    font-style: italic;
+    font-size: 21px;
+    color: var(--ivoire);
+  }
+  .filet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 18px 0;
+  }
+  .filet span { width: 56px; height: 1px; background: var(--or); }
+  .filet i { width: 6px; height: 6px; background: var(--or); transform: rotate(45deg); }
+  .intro {
+    margin: 0 0 22px;
+    font-size: 19px;
+    color: var(--ivoire-doux);
+  }
+
+  /* ===== BOUTONS ===== */
+  .liens {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .bouton {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 64px;
+    padding: 10px 16px 10px 12px;
+    border: 1px solid rgba(201,164,76,0.7);
+    border-radius: 6px;
+    background: var(--noir-2);
+    color: var(--ivoire);
+    text-decoration: none;
+    text-align: left;
+    transition: background-color .25s ease, border-color .25s ease, transform .25s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .bouton:hover, .bouton:focus-visible {
+    background: #1E1A12;
+    border-color: var(--or-clair);
+    transform: translateY(-1px);
+  }
+  .bouton:active { transform: scale(0.99); }
+  .bouton:focus-visible { outline: 2px solid var(--or-clair); outline-offset: 3px; }
+  .icone {
+    flex: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--or);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--or);
+  }
+  .icone svg { width: 20px; height: 20px; }
+  .texte { flex: 1; min-width: 0; }
+  .nom {
+    display: block;
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--or-clair);
+  }
+  .action {
+    display: block;
+    margin-top: 2px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--ivoire);
+  }
+  .fleche { flex: none; color: var(--or); width: 18px; height: 18px; }
+
+  .contact {
+    margin: 24px 0 0;
+    font-size: 17px;
+    color: var(--ivoire-doux);
+  }
+  .contact a { color: var(--or-clair); text-decoration: none; border-bottom: 1px solid rgba(232,207,142,0.4); }
+  .contact a:hover { border-bottom-color: var(--or-clair); }
+  .pied {
+    margin: 18px 0 0;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: #A89A7C;
+  }
+
+  /* ===== ANIMATIONS LÉGÈRES ===== */
+  @keyframes apparition {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .anim { opacity: 0; animation: apparition .7s ease-out forwards; }
+  .d1 { animation-delay: .05s; } .d2 { animation-delay: .15s; } .d3 { animation-delay: .25s; }
+  .d4 { animation-delay: .35s; } .d5 { animation-delay: .45s; } .d6 { animation-delay: .55s; }
+  .d7 { animation-delay: .65s; } .d8 { animation-delay: .75s; }
+  @media (prefers-reduced-motion: reduce) {
+    .anim { opacity: 1; animation: none; }
+    .bouton { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main class="carte">
+
+  <img class="logo anim d1" src="logo-p51.png" alt="Logo PARFUMERIE 51" width="132" height="143"
+       onerror="this.style.display='none'; document.getElementById('logo-secours').style.display='flex';">
+  <div id="logo-secours" class="logo-secours" aria-hidden="true">P51</div>
+
+  <h1 class="anim d2">PARFUMERIE 51</h1>
+  <p class="bienvenue anim d3">Bienvenue chez Parfumerie 51</p>
+  <div class="filet anim d3" aria-hidden="true"><span></span><i></i><span></span></div>
+  <p class="intro anim d4">Retrouvez-nous sur nos réseaux sociaux</p>
+
+  <!-- ===== LIENS OFFICIELS — modifier uniquement les href ci-dessous ===== -->
+  <ul class="liens">
+    <li class="anim d5">
+      <a class="bouton" href="https://www.instagram.com/parfumerie___51?obrf=dmR4ZGpmenA5eDln" target="_blank" rel="noopener noreferrer">
+        <span class="icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-2.5h5L16 7"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+        </span>
+        <span class="texte"><span class="nom">Instagram</span><span class="action">Suivez-nous sur Instagram</span></span>
+        <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </li>
+    <li class="anim d6">
+      <a class="bouton" href="https://www.tiktok.com/@parfumerie.51" target="_blank" rel="noopener noreferrer">
+        <span class="icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18V6l9-2v11"/><circle cx="7.5" cy="18" r="2.5"/><circle cx="16.5" cy="15" r="2.5"/></svg>
+        </span>
+        <span class="texte"><span class="nom">TikTok</span><span class="action">Découvrez nos vidéos sur TikTok</span></span>
+        <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </li>
+    <li class="anim d7">
+      <a class="bouton" href="https://www.facebook.com/share/19h1VFQWWt/" target="_blank" rel="noopener noreferrer">
+        <span class="icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3z"/><path d="M7 11l4-7c1.5 0 2.6 1.1 2.2 2.6L12.6 10H18a2 2 0 0 1 2 2.3l-1.2 6A2 2 0 0 1 16.8 20H7"/></svg>
+        </span>
+        <span class="texte"><span class="nom">Facebook</span><span class="action">Retrouvez notre page Facebook</span></span>
+        <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </li>
+    <li class="anim d8">
+      <a class="bouton" href="https://wa.me/212635702000" target="_blank" rel="noopener noreferrer">
+        <span class="icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 10h8M8 13h5"/></svg>
+        </span>
+        <span class="texte"><span class="nom">WhatsApp</span><span class="action">Contactez-nous sur WhatsApp</span></span>
+        <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </li>
+  </ul>
+
+  <p class="contact anim d8">Téléphone : <a href="tel:+212635702000">+212 635 70 20 00</a></p>
+  <p class="pied anim d8">PARFUMERIE 51</p>
+</main>
+</body>
+</html>
